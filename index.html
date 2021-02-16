@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio y_ju</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/common.css">
+  
+</head>
+<body>
+  <!-- skip_nav -->
+	<div id="skip_nav">
+    <a href="#gnb">메뉴 바로가기</a>
+		<a href="#container">본문 바로가기</a>
+	</div>
+	<!-- //skip_nav -->
+  <div id="wrap" class="main">
+    <!-- header -->
+    <header id="header">
+      <div id="gnb">
+        <ul class="gnbWrap">
+          <li class="info"><a href="./info.html">Info</a></li>
+          <li class="work"><a href="./work.html">Work</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="container">
+      <!-- mv -->
+      <section class="ms sec_mv winH">
+        <div class="mvWrap">
+          <div class="mv_txt">
+            <strong><span>Be</span></strong><strong><span>all</span></strong><br>
+            <strong class="stroke"><span>you</span></strong><strong class="stroke"><span>can</span></strong><br class="m_only"><strong><span>be.</span></strong>
+          </div>
+          <div class="rot_txt">
+            <p>Web publisher</p>
+          </div>
+          <div class="scr_down">
+            <p>Scroll</p>
+          </div>
+        </div>
+      </section>
+      <section class="ms sec_cont winH animate">
+        <div class="sec_glassBox animate">
+          <div class="sec_inner">
+            <div class="tit_box animate">
+              <a href="./work.html" class="tit">My works<span></span></a>
+            </div>
+            <div class="work_slider animate">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper_inner on">
+                    <a href="http://www.hanstone.com" target="_blank" class="btn_site"><span>Website</span></a>
+                    <div class="item_inner">
+                      <div class="txt_box">
+                        <strong><a href="./work.html#hyndai">1.HYUNDAI HanStone & Hanex</a></strong>
+                        <p>2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper_inner">
+                    <a href="https://www.honest.co.kr/" target="_blank" class="btn_site"><span>Website</span></a>
+                    <div class="item_inner">
+                      <div class="txt_box">
+                        <strong><a href="./work.html#honest">2.Honest</a></strong>
+                        <p>2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper_inner">
+                    <a href="https://www.eoyeomo.com/" target="_blank" class="btn_site"><span>Website</span></a>
+                    <div class="item_inner">
+                      <div class="txt_box">
+                        <strong><a href="./work.html#eoyeomo">3.Eoyeomo</a></strong>
+                        <p>2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper_inner">
+                    <a href="https://www.cleanbroom.co.kr/" target="_blank" class="btn_site"><span>Website</span></a>
+                    <div class="item_inner">
+                      <div class="txt_box">
+                        <strong><a href="./work.html#broom">4.Broom</a></strong>
+                        <p>2019~2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="work-slider-arr">
+                <span class="arr prev">prev</span><span class="arr next">next</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer id="footer">
+      <div class="footer_inner">
+        <p class="copy">Copyright(c)2021 Jo-yunju All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script refer src="js/common.js"></script>
+  <script>
+     (function(){
+      // load event
+      let timeId;
+      const mvElem = document.querySelector('.mvWrap');
+
+      function loadEventHandler() {
+        mvElem.classList.add('on');
+      }
+
+      timeId = setTimeout(loadEventHandler, 400);
+
+      mvElem.addEventListener('load', (event) => {
+        clearTimeout(timeId);
+      });
+
+
+      const mvtxtWrap = document.querySelector('.mv_txt');
+      const mvtxtElem = document.querySelectorAll('.mv_txt > strong');
+      const mousePos = { x: 0, y: 0 };
+    //  console.log(mvtxtElem);
+
+      mvtxtWrap.addEventListener('mousemove', function (e) {
+        mousePos.x = -1 + (e.clientX / window.innerWidth) * 2;
+        mousePos.y = 1 - (e.clientY / window.innerHeight) * 2;
+
+        for(let i = 0; i < mvtxtElem.length; i++){
+          mvtxtElem[i].style.transform = 'rotateX(' + (mousePos.y * 30) + 'deg) rotateY(' + (mousePos.x * 30) + 'deg)';
+        }
+      });
+      
+    // work slider
+      const workSlider = new Swiper('.work_slider', {
+        loop: true,
+        navigation: {
+          nextEl: '.work-slider-arr .next',
+          prevEl: '.work-slider-arr .prev',
+        },
+        slidesPerView: 1,
+        spaceBetween: 12,
+        breakpoints: {
+          767: {
+            slidesPerView: 2,
+            spaceBetween: 26,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 36,
+          },
+        }
+      });
+    })();
+
+    (function () {
+      const useragent = window.navigator.userAgent.toLowerCase();
+      if (useragent.indexOf('chrome') < 0 && useragent.indexOf('safari') < 0) {
+          document.body.style.cssText = 'height: auto';
+      }
+    })();
+  </script>
+</body>
+</html>
