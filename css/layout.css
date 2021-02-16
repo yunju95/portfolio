@@ -50,8 +50,12 @@
   /*overflow: hidden; */
 }
 #wrap.main #container {
-  background: url(../images/mv.jpg) no-repeat 50%;background-size: cover;
+  background: url(../images/mv.jpg) no-repeat 50%;
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 section.ms {
