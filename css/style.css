@@ -337,4 +337,7 @@ br.m_only {display:none;}
     line-height: 1.6;
     margin-top: 5px;
   }
+  .infoWrap .info_list .info_box p span {
+    margin-left: 5px;
+  }
 }
