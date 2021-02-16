@@ -181,11 +181,11 @@ section.ms {
 }
 .sec_glassBox .tit:hover span:before {
   border-radius: 100%;
-  animation: bounce .6s alternate infinite ease-in-out;
+  animation: bounce .8s alternate ease-in-out;
 }
 @keyframes bounce {
   to{
-    transform: translate(-50%,-50%) scale(2.3);
+    transform: translate(-50%,-50%) scale(2);
   }
   from{
     transform: translate(-50%,-50%) scale(1);
