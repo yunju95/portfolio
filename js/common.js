@@ -18,7 +18,8 @@ headerElem.addEventListener('load', (event) => {
 (function(){
   const winH = document.querySelectorAll('.winH');
   const footerElem = document.querySelector('#footer');
-  const subContElem = document.querySelector('.sub #container')
+  const subContElem = document.querySelector('.info #container');
+  console.log(subContElem);
 
   function respHeighHandler(){
     const vh = window.innerHeight;
@@ -30,8 +31,14 @@ headerElem.addEventListener('load', (event) => {
       winH[i].style.height = vh + 'px';
       winH[1].style.height = (vh - footerH) + 'px';  
     }
-    if ( subContElem == true ){
+    // if ( subContElem == true ){
+    //   subContElem.style.minHeight = vh + 'px';
+    // }
+
+    if( window.innerWidth < 1025 && window.innerWidth > 900) {
       subContElem.style.minHeight = vh + 'px';
+    } else {
+      subContElem.style.minHeight = 'auto';
     }
   }
   

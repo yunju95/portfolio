@@ -1,6 +1,9 @@
 /* container */
 #wrap.sub #container {
-  background-color: #bdbdbd; padding-top: 230px; padding-bottom: 200px;
+  padding-top: 230px; padding-bottom: 200px;
+}
+#wrap.sub.work #container {
+  background-color: #bdbdbd;
 }
 #wrap.sub.info #container {
   position: relative;
@@ -8,7 +11,7 @@
   background-attachment: fixed; */
 }
 #wrap.sub.info #container:before {
-  position: fixed; content: ''; left:0; top: 0; width: 100%; height: 100%;
+  position: fixed; content: ''; left:0; top: 0; width: 100%; height: 100%; z-index: -1;
   background: url(../images/bg_info.jpg) no-repeat 50%; background-size: cover;
 }
 .inner {
