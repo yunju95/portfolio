@@ -209,6 +209,9 @@ br.m_only {display:none;}
 .infoWrap .info_list .info_box p span {
   margin-left: 10px; color: #8e71f1; font-weight: 500; font-size: 0.875rem;
 }
+.infoWrap .info_list .info_box p a {
+  text-decoration: underline;
+}
 .infoWrap .info_list .info_box p a.filedown {
   position: relative; padding-right: 22px;
   background: url(../images/download.png) no-repeat right 50%; 
