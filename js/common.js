@@ -31,15 +31,8 @@ headerElem.addEventListener('load', (event) => {
       winH[i].style.height = vh + 'px';
       winH[1].style.height = (vh - footerH) + 'px';  
     }
-    // if ( subContElem == true ){
-    //   subContElem.style.minHeight = vh + 'px';
-    // }
-
-    if( window.innerWidth < 1025 && window.innerWidth > 900) {
-      subContElem.style.minHeight = vh + 'px';
-    } else {
-      subContElem.style.minHeight = 'auto';
-    }
+     subContElem.style.minHeight = vh + 'px';
+    
   }
   
   window.addEventListener('load', respHeighHandler);
