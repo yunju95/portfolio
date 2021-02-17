@@ -19,7 +19,6 @@ headerElem.addEventListener('load', (event) => {
   const winH = document.querySelectorAll('.winH');
   const footerElem = document.querySelector('#footer');
   const subContElem = document.querySelector('.info #container');
-  console.log(subContElem);
 
   function respHeighHandler(){
     const vh = window.innerHeight;
