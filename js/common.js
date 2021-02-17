@@ -18,20 +18,16 @@ headerElem.addEventListener('load', (event) => {
 (function(){
   const winH = document.querySelectorAll('.winH');
   const footerElem = document.querySelector('#footer');
-  const subContElem = document.querySelector('.info #container');
 
   function respHeighHandler(){
     const vh = window.innerHeight;
     for( let i = 0; i < winH.length; i++ ){ 
       
       const footerH = footerElem.offsetHeight;
-      //console.log(vh);
       
       winH[i].style.height = vh + 'px';
       winH[1].style.height = (vh - footerH) + 'px';  
     }
-     subContElem.style.minHeight = vh + 'px';
-    
   }
   
   window.addEventListener('load', respHeighHandler);

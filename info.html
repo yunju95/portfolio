@@ -77,7 +77,21 @@
     </footer>
   </div>
   <script refer src="js/common.js"></script>
-  <script>    
+  <script> 
+    // winH
+    (function(){
+      const winH = document.querySelectorAll('.winH');
+      const subContElem = document.querySelector('.info #container');
+
+      function respHeighHandler(){
+        const vh = window.innerHeight;
+        subContElem.style.minHeight = vh + 'px'; 
+      }
+      
+      window.addEventListener('load', respHeighHandler);
+      window.addEventListener('resize', respHeighHandler);
+    })();
+
     (function () {
       const useragent = window.navigator.userAgent.toLowerCase();
       if (useragent.indexOf('chrome') < 0 && useragent.indexOf('safari') < 0) {

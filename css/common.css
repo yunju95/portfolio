@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://unpkg.com/swiper/swiper-bundle.min.css'); /* Link Swiper's CSS */
 @import url('layout.css');
 @import url('style.css'); 
 
@@ -96,12 +97,6 @@ textarea {overflow: auto; resize: none;}
   border-radius: 3px;
 }*/
 
-
-/* 커서 CSS */
-::selection {
-  /* color: #fff ; */
-  background: rgba(79,135,232,.7) ;
-}
 
 
 @media screen and (max-width: 767px){
