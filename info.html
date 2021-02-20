@@ -76,7 +76,7 @@
       </div>
     </footer>
   </div>
-  <script refer src="js/common.js"></script>
+  <script src="js/common.js"></script>
   <script> 
     // winH
     (function(){
@@ -90,13 +90,6 @@
       
       window.addEventListener('load', respHeighHandler);
       window.addEventListener('resize', respHeighHandler);
-    })();
-
-    (function () {
-      const useragent = window.navigator.userAgent.toLowerCase();
-      if (useragent.indexOf('chrome') < 0 && useragent.indexOf('safari') < 0) {
-          document.body.style.cssText = 'height: auto';
-      }
     })();
   </script>
 </body>

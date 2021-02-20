@@ -53,3 +53,13 @@ headerElem.addEventListener('load', (event) => {
   window.addEventListener('load', animateEventHandler);
 })();
 
+
+
+
+
+(function () {
+  const useragent = window.navigator.userAgent.toLowerCase();
+  if (useragent.indexOf('chrome') < 0 && useragent.indexOf('safari') < 0) {
+      document.body.style.cssText = 'height: auto';
+  }
+})();
