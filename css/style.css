@@ -341,3 +341,24 @@ br.m_only {display:none;}
     margin-left: 5px;
   }
 }
+
+
+@media screen and (max-height: 520px){
+  #wrap.sub #container {
+    padding-top: 90px;
+  }
+  .workWrap .work_left_cont .cont_tit strong {
+    font-size: 17vh;
+  }
+  .work_list .work_year {
+    font-size: 2.5rem;
+  }
+  #wrap.sub.info #container:before {
+    background-position: 50% bottom;
+  }
+  .infoWrap .info_list .info_box strong {
+    width: 200px;
+    -webkit-text-stroke: 1px #af9bf3;
+    text-stroke: 1px #af9bf3;
+  }
+}

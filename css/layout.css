@@ -154,7 +154,7 @@ section.section {
 }
 .sec_glassBox {
   display: flex; align-items: center; 
-  height: 100%; border-radius: 30px; padding: 0 2vw 0 9vw;
+  height: 100%; border-radius: 30px; padding: 10vh 2vw 10vh 9vw;
   background: rgba( 255, 255, 255, 0.25 );
   /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
   backdrop-filter: blur( 4.0px );
@@ -327,7 +327,7 @@ section.section {
   }
 
   .sec_glassBox {
-   padding: 0 2vw 0 6vw; 
+   padding: 10vh 2vw 10vh 6vw; 
   }
   .sec_glassBox .tit {
     font-size: 2em;
@@ -372,5 +372,20 @@ section.section {
   }
   #footer {
     padding: 20px 30px;
+  }
+}
+
+@media screen and (max-height: 520px){
+  .mvWrap .mv_txt strong {
+    font-size: 17.5vh;
+  }
+  .section.sec_cont {
+    height: auto !important;
+  }
+  .sec_glassBox {
+    padding: 10vh 6vw 10vh 14vw;
+  }
+  .work_slider .txt_box strong {
+    font-size: 2.5vw;
   }
 }
